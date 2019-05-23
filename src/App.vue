@@ -16,16 +16,19 @@
 </template>
 
 <script lang="ts">
-// export default{
-//   name: 'App'
-// }
 import Vue from 'vue'
-import Component from 'vue-class-component'
+import { Component, Provide } from 'vue-property-decorator'
 
-@Component({})
+import NavMenu from 'components/NavMenu.vue'
+
+@Component({
+  components:{
+    NavMenu
+  }
+})
 
 export default class App extends Vue {
-
+  name: 'app'
 }
 </script>
 
